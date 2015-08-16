@@ -1,0 +1,36 @@
+{
+  "name": "simple-spy",
+  "version": "1.0.0",
+  "description": "yet another spy library",
+  "homepage": "",
+  "repository": "tjoskar/simple-spy",
+  "author": {
+    "name": "Oskar Karlsson",
+    "email": "kontakta@oskarkarlsson.nu",
+    "url": "oskarkarlsson.nu"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "spy"
+  ],
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^0.4.5",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-babel": "^5.1.0",
+    "babel-core": "^5.5.0"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
