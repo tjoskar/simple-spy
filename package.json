@@ -10,7 +10,8 @@
     "url": "oskarkarlsson.nu"
   },
   "files": [
-    "dist"
+    "dist",
+    "typings"
   ],
   "main": "dist/index.js",
   "keywords": [
