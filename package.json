@@ -16,6 +16,9 @@
   "keywords": [
     "spy"
   ],
+  "typescript": {
+    "definition": "./typings/simple-spy.d.ts"
+  },
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-eslint": "^0.15.0",
