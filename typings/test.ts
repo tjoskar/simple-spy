@@ -6,3 +6,4 @@ let k = spy(fun);
 console.log(k.callCount);
 console.log(k.args[0][0].k);
 k();
+k.reset();
