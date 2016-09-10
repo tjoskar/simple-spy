@@ -1,6 +1,6 @@
 {
   "name": "simple-spy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "yet another spy library",
   "homepage": "",
   "repository": "tjoskar/simple-spy",
@@ -20,6 +20,7 @@
   "typescript": {
     "definition": "./typings/simple-spy.d.ts"
   },
+  "typings": "./typings/simple-spy.d.ts",
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-eslint": "^0.15.0",
