@@ -16,6 +16,7 @@
     "test": "nyc ava"
   },
   "files": [
+    "index.d.ts",
     "index.js"
   ],
   "keywords": [
