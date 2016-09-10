@@ -1,41 +1,40 @@
 {
   "name": "simple-spy",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "yet another spy library",
-  "homepage": "",
+  "license": "MIT",
   "repository": "tjoskar/simple-spy",
   "author": {
     "name": "Oskar Karlsson",
     "email": "kontakta@oskarkarlsson.nu",
     "url": "oskarkarlsson.nu"
   },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "nyc ava"
+  },
   "files": [
-    "dist",
-    "typings"
+    "index.js"
   ],
-  "main": "dist/index.js",
   "keywords": [
     "spy"
   ],
   "typescript": {
-    "definition": "./typings/simple-spy.d.ts"
+    "definition": "./index.d.ts"
   },
-  "typings": "./typings/simple-spy.d.ts",
+  "typings": "./index.d.ts",
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.6.0",
-    "gulp-eslint": "^0.15.0",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^0.9.0",
-    "gulp-mocha": "^2.0.0",
-    "gulp-plumber": "^1.0.0",
-    "gulp-nsp": "^0.4.5",
-    "gulp-coveralls": "^0.1.0",
-    "gulp-babel": "^5.1.0",
-    "babel-core": "^5.5.0"
+    "ava": "^0.15.2",
+    "coveralls": "^2.11.12",
+    "nyc": "^7.1.0"
   },
-  "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
-  "license": "MIT"
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
 }
