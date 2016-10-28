@@ -10,6 +10,9 @@ function spy(fn) {
         return fn(...args);
     };
 
+    // ends up a string like
+    // 'a,b,c,d'
+    // depending on the `fn.length`
     const stubArgs = Array(fn.length)
         .fill(null)
         .map((m, i) => String.fromCodePoint(97 + i))
