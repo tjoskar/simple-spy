@@ -17,6 +17,8 @@ function spy(fn) {
 
     stub.reset();
 
+    Object.defineProperty(stub, 'length', {value: fn.length});
+
     return stub;
 }
 
