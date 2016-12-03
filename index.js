@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', {
 });
 
 function spy(fn) {
-    const stub = (...args) => {
+    const stub = function (...args) {
         stub.callCount++;
         stub.args.push(args);
         return fn(...args);
