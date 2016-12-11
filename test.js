@@ -120,3 +120,8 @@ test('real function and stub have same length (arity)', t => {
 
     t.is(funSpy11.length, 11);
 });
+
+test('can be used as constructor', t => {
+    const ctorSpy = spy(() => {});
+    t.notThrows(() => { new ctorSpy() });
+})
