@@ -28,7 +28,7 @@
   "typings": "./index.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.20.0",
+    "ava": "^0.21.0",
     "coveralls": "^2.11.12",
     "nyc": "^11.0.2"
   },
