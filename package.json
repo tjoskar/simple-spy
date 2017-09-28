@@ -29,7 +29,7 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.22.0",
-    "coveralls": "^2.11.12",
+    "coveralls": "^3.0.0",
     "nyc": "^11.0.2"
   },
   "nyc": {
