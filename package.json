@@ -9,15 +9,20 @@
     "email": "kontakta@oskarkarlsson.nu",
     "url": "oskarkarlsson.nu"
   },
+  "contibutors": [
+    "Shahar Or <mightyiampresence@gmail.com> (http://mightyi.am)"
+  ],
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "test": "nyc ava"
+    "compile": "tsc",
+    "unit": "nyc ava",
+    "test": "run-s compile unit"
   },
   "files": [
-    "index.d.ts",
-    "index.js"
+    "./lib/index.js",
+    "./lib/index.d.ts"
   ],
   "keywords": [
     "spy"
@@ -25,12 +30,15 @@
   "typescript": {
     "definition": "./index.d.ts"
   },
-  "typings": "./index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.23.0",
     "coveralls": "^3.0.0",
-    "nyc": "^11.0.2"
+    "npm-run-all": "^4.1.1",
+    "nyc": "^11.0.2",
+    "typescript": "^2.5.3"
   },
   "nyc": {
     "reporter": [

@@ -17,7 +17,7 @@ test('should call the original function', t => {
 test('should call the original function with arguments', t => {
     // Arrange
     let myNumber = 0;
-    const fun = newNumber => myNumber = newNumber;
+    const fun = (newNumber: number) => myNumber = newNumber;
     const funSpy = spy(fun);
 
     // Act
@@ -110,18 +110,18 @@ test('reset should reset arguments list', t => {
 });
 
 test('real function and stub have same length (arity)', t => {
-    const fun3 = (a, b, c) => {};
+    const fun3 = (a: null, b: null, c: null) => {};
     const funSpy3 = spy(fun3);
 
     t.is(funSpy3.length, 3);
 
-    const fun11 = (a, b, c, d, e, f, g, h, i ,j, k) => {};
+    const fun11 = (a: null, b: null, c: null, d: null, e: null, f: null) => {};
     const funSpy11 = spy(fun11);
 
-    t.is(funSpy11.length, 11);
+    t.is(funSpy11.length, 6);
 });
 
 test('can be used as constructor', t => {
     const ctorSpy = spy(() => {});
-    t.notThrows(() => { new ctorSpy() });
+    t.notThrows(() => { new (ctorSpy as any)() });
 })
