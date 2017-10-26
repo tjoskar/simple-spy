@@ -38,9 +38,11 @@
     "coveralls": "^3.0.0",
     "npm-run-all": "^4.1.1",
     "nyc": "^11.0.2",
+    "nyc-config-100": "^1.0.1",
     "typescript": "^2.5.3"
   },
   "nyc": {
+    "extends": "nyc-config-100",
     "reporter": [
       "lcov",
       "text"
