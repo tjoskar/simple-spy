@@ -3,7 +3,7 @@ Object.defineProperty(exports, '__esModule', {
     value: true
 });
 
-function spy(fn) {
+function spy(fn = () => undefined) {
     const stub = function (...args) {
         stub.callCount++;
         stub.args.push(args);
