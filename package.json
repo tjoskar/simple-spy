@@ -18,7 +18,8 @@
   "scripts": {
     "compile": "tsc",
     "unit": "nyc ava",
-    "test": "run-s compile unit"
+    "test": "run-s compile unit",
+    "prepare": "npm run test"
   },
   "files": [
     "./lib/index.js",
