@@ -110,12 +110,12 @@ test('reset should reset arguments list', t => {
 });
 
 test('real function and stub have same length (arity)', t => {
-    const fun3 = (a: null, b: null, c: null) => {};
+    const fun3 = (a: null, b: null, c: null) => [a, b, c];
     const funSpy3 = spy(fun3);
 
     t.is(funSpy3.length, 3);
 
-    const fun11 = (a: null, b: null, c: null, d: null, e: null, f: null) => {};
+    const fun11 = (a: null, b: null, c: null, d: null, e: null, f: null) => [a, b, c, d, e, f];
     const funSpy11 = spy(fun11);
 
     t.is(funSpy11.length, 6);
