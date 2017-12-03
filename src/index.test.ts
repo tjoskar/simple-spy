@@ -125,3 +125,15 @@ test('can be used as constructor', t => {
   const ctorSpy = spy(() => {})
   t.notThrows(() => { new (ctorSpy as any)() }) // eslint-disable-line no-new
 })
+
+test('support creating a spy without a function', t => {
+  // Arrange
+  const funSpy = spy()
+
+  // Act
+  const ret = funSpy()
+
+  // Assert
+  t.is(funSpy.callCount, 1)
+  t.is(ret, undefined)
+})
