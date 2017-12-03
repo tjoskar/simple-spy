@@ -35,12 +35,12 @@
   "types": "./lib/index.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.23.0",
+    "ava": "^0.24.0",
     "coveralls": "^3.0.0",
-    "npm-run-all": "^4.1.1",
-    "nyc": "^11.0.2",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.3.0",
     "nyc-config-100": "^1.0.1",
-    "typescript": "^2.5.3"
+    "typescript": "^2.6.2"
   },
   "nyc": {
     "extends": "nyc-config-100",
