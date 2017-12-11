@@ -3,8 +3,9 @@ node_js:
   - lts/*
   - node
 before_install:
+  - npm install -g codecov
   - npm install -g greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update
 after_script:
   - greenkeeper-lockfile-upload
-  - 'cat coverage/lcov.info | ./node_modules/.bin/coveralls'
+  - codecov
