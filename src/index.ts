@@ -4,7 +4,9 @@ export interface SpyReturn extends Function {
   reset(): void
 };
 
-export function spy (fn: any) {
+const noop = () => undefined
+
+export function spy (fn: any = noop) {
   const spyReturn: SpyReturn = Object.assign(
     function (...args: any[]) {
       spyReturn.callCount++
