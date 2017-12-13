@@ -47,7 +47,7 @@
     "npm-run-all": "^4.1.2",
     "nyc": "^11.3.0",
     "nyc-config-100": "^1.0.1",
-    "typescript": "^2.6.2",
+    "typescript": "2.6.2",
     "typescript-eslint-parser": "^11.0.0"
   },
   "nyc": {
