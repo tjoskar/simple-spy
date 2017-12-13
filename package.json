@@ -23,8 +23,8 @@
     "prepare": "npm run test"
   },
   "files": [
-    "./lib/index.js",
-    "./lib/index.d.ts"
+    "lib/index.js",
+    "lib/index.d.ts"
   ],
   "keywords": [
     "spy"
