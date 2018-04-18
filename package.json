@@ -48,7 +48,7 @@
     "nyc": "^11.3.0",
     "nyc-config-100": "^1.0.1",
     "typescript": "2.6.2",
-    "typescript-eslint-parser": "^14.0.0"
+    "typescript-eslint-parser": "^15.0.0"
   },
   "nyc": {
     "extends": "nyc-config-100",
