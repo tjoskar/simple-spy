@@ -6,7 +6,7 @@ export interface SpyReturn extends Function {
 
 const noop = () => undefined
 
-export function spy (fn: any = noop) {
+export function spy (fn: any = noop): SpyReturn {
   const spyReturn: SpyReturn = Object.assign(
     function (...args: any[]) {
       spyReturn.callCount++
