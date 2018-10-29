@@ -23,7 +23,7 @@ export function spy (fn: any = noop): SpyReturn {
     }
   )
 
-  Object.defineProperty(spyReturn, 'length', {value: fn.length})
+  Object.defineProperty(spyReturn, 'length', { value: fn.length })
 
   return spyReturn
 }
