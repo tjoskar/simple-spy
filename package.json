@@ -29,9 +29,6 @@
   "keywords": [
     "spy"
   ],
-  "typescript": {
-    "definition": "./index.d.ts"
-  },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {},
