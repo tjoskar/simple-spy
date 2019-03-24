@@ -1,9 +1,7 @@
 {
   "extends": "standard-with-typescript",
-  "parser": "typescript-eslint-parser",
-  "rules": {
-    "typescript/explicit-function-return-type": {
-      "allowExpressions": true
-    }
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
   }
 }

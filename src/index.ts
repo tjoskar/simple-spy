@@ -1,29 +1,31 @@
-export interface SpyReturn extends Function {
+type Fn<Args extends any[], RetVal> = (...args: Args) => RetVal
+
+export type SpyReturn<Args extends any[], RetVal> = Fn<Args, RetVal> & {
   callCount: number
-  args: Array<Array<any>>
+  args: Args[]
   reset(): void
-};
+}
 
-const noop = () => undefined
+const noop = (): undefined => undefined
 
-export function spy (fn: any = noop): SpyReturn {
-  const spyReturn: SpyReturn = Object.assign(
-    function (...args: any[]) {
+export function spy<Args extends any[], RetVal> (fn?: Fn<Args, RetVal>): SpyReturn<Args, RetVal | undefined> {
+  const spyReturn: SpyReturn<Args, RetVal | undefined> = Object.assign(
+    function (...args: Args): RetVal | ReturnType<typeof noop> {
       spyReturn.callCount++
       spyReturn.args.push(args)
-      return fn(...args)
+      return fn ? fn(...args) : noop()
     },
     {
       callCount: 0,
-      args: [],
-      reset: () => {
+      args: [] as Args[],
+      reset: (): void => {
         spyReturn.callCount = 0
-        spyReturn.args = []
+        spyReturn.args = [] as Args[]
       }
     }
   )
 
-  Object.defineProperty(spyReturn, 'length', { value: fn.length })
+  Object.defineProperty(spyReturn, 'length', { value: (fn || noop).length })
 
   return spyReturn
 }

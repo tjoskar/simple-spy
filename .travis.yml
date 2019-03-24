@@ -3,8 +3,10 @@ node_js:
   - lts/*
   - node
 before_install:
+  - npm install -g npm
   - npm install -g codecov
-  - npm install -g greenkeeper-lockfile@1
+  - npm install -g greenkeeper-lockfile
+install: npm install
 before_script: greenkeeper-lockfile-update
 after_script:
   - greenkeeper-lockfile-upload
