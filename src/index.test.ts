@@ -14,6 +14,14 @@ test('should call the original function', (t): void => {
   t.is(called, true)
 })
 
+test('should return original', (t) => {
+  const expected = Symbol('return value')
+  const fun = (): Symbol => expected
+  const funSpy = spy(fun)
+  const actual = funSpy()
+  t.is(actual, expected)
+})
+
 test('should call the original function with arguments', (t): void => {
   // Arrange
   let myNumber = 0
