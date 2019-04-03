@@ -14,7 +14,7 @@ test('should call the original function', (t): void => {
   t.is(called, true)
 })
 
-test('should return original', (t) => {
+test('should return original', (t): void => {
   const expected = Symbol('return value')
   const fun = (): Symbol => expected
   const funSpy = spy(fun)
