@@ -20,7 +20,9 @@
     "compile": "tsc",
     "unit": "nyc ava",
     "test": "run-s lint compile unit",
-    "prepare": "npm run test"
+    "prepare": "npm test",
+    "preversion": "npm run compile",
+    "postversion": "git push; git push --tags"
   },
   "files": [
     "lib/index.js",
