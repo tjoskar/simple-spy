@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import test from 'ava'
 import { spy } from './'
 

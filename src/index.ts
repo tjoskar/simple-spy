@@ -6,7 +6,7 @@ export type SpyReturn<Args extends any[], RetVal> = Fn<Args, RetVal> & {
   reset(): void
 }
 
-const noop = (): void => {}
+const noop = (): void => {} // eslint-disable-line @typescript-eslint/no-empty-function
 
 function spy<Args extends any[]> (): SpyReturn<Args, void>
 function spy<Args extends any[], RetVal> (fn: Fn<Args, RetVal>): SpyReturn<Args, RetVal>
