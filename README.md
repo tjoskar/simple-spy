@@ -1,4 +1,4 @@
-# simple-spy [![Build Status](https://travis-ci.org/tjoskar/simple-spy.svg?branch=master)](https://travis-ci.org/tjoskar/simple-spy) [![Coverage Status](https://coveralls.io/repos/github/tjoskar/simple-spy/badge.svg?branch=master)](https://coveralls.io/github/tjoskar/simple-spy?branch=master)
+# simple-spy [![Coverage Status](https://coveralls.io/repos/github/tjoskar/simple-spy/badge.svg?branch=master)](https://coveralls.io/github/tjoskar/simple-spy?branch=master)
 
 > yet another spy library
 

@@ -1,0 +1,26 @@
+name: Node CI
+
+on: ['push']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: ⬇️ Install
+        run: npm ci
+      - name: 🏗 Build
+        run: npm run compile
+      - name: 🚥 Lint
+        run: npm run lint
+      - name: ✅ Test
+        run: npm run unit
+      - name: Coveralls 👕
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
