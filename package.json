@@ -16,7 +16,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.ts .",
+    "lint": "eslint .",
     "compile": "tsc",
     "unit": "nyc ava",
     "test": "run-s lint compile unit",
