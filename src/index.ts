@@ -21,10 +21,10 @@ function spy<Args extends any[], RetVal> (
     },
     {
       callCount: 0,
-      args: [] as Args[],
+      args: [],
       reset: (): void => {
         spyReturn.callCount = 0
-        spyReturn.args = [] as Args[]
+        spyReturn.args = []
       }
     }
   )
