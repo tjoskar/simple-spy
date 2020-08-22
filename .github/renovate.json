@@ -6,7 +6,10 @@
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
-      "automerge": true
+      "automerge": true,
+      "major": {
+        "automerge": false
+      }
     },
     {
       "packagePatterns": [
