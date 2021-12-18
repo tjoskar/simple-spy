@@ -44,7 +44,7 @@
     "eslint-config-standard-with-typescript": "20.0.0",
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.2.0",
+    "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-standard": "4.1.0",
     "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
