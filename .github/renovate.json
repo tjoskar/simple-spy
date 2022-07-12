@@ -6,18 +6,7 @@
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
-      "automerge": true,
-      "major": {
-        "automerge": false
-      }
-    },
-    {
-      "packagePatterns": [
-        "^eslint-config-",
-        "\/eslint-plugin$"
-      ],
-      "groupName": "eslint packages",
-      "separateMajorMinor": false
+      "automerge": true
     }
   ]
 }

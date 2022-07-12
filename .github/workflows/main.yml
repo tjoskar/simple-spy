@@ -1,6 +1,6 @@
 name: Node CI
 
-on: ['push']
+on: ["push"]
 
 jobs:
   build:
@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js v12
+      - name: Use Node.js v18
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: "18.x"
       - name: ⬇️ Install
         run: npm ci
       - name: 🏗 Build
@@ -19,8 +19,4 @@ jobs:
       - name: 🚥 Lint
         run: npm run lint
       - name: ✅ Test
-        run: npm run unit
-      - name: Coveralls 👕
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run test

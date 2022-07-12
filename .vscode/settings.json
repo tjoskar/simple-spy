@@ -1,7 +1,11 @@
 {
-  "eslint.validate": [
-    "typescript"
-  ],
   "tslint.enable": false,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "eslint.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "xo.enable": true,
+  "xo.format.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  }
 }
