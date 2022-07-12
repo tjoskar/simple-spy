@@ -2,43 +2,42 @@
 
 > yet another spy library
 
-
 ## Install
 
 ```
-$ npm install --save simple-spy
+$ npm install --save-dev simple-spy
 ```
-
 
 ## Usage
 
+Live test the package and types in this Stackblitz container: https://stackblitz.com/edit/vitest-dev-vitest-ykic5d?file=test/basic.test.ts
+
 ```js
-import { spy } from 'simple-spy'
+import { spy } from "simple-spy";
 
-const fun = (...args) => console.log(...args)
-const funSpy = spy(fun)
+const fun = (...args) => console.log(...args);
+const funSpy = spy(fun);
 
-assert(funSpy.callCount === 0)
-assert(funSpy.args.length === 0)
+assert(funSpy.callCount === 0);
+assert(funSpy.args.length === 0);
 
-funSpy('Hello Dexter Morgan') // Output:  Hello Dexter Morgan
+funSpy("Hello Dexter Morgan"); // Output:  Hello Dexter Morgan
 
-assert(funSpy.callCount === 1)
-assert(funSpy.args.length === 1)
-assert(funSpy.args[0][0] === 'Hello Dexter Morgan')
+assert(funSpy.callCount === 1);
+assert(funSpy.args.length === 1);
+assert(funSpy.args[0][0] === "Hello Dexter Morgan");
 
-funSpy.reset()
+funSpy.reset();
 
-funSpy(1, 2, 3) // Output:  1 2 3
+funSpy(1, 2, 3); // Output:  1 2 3
 
-assert(funSpy.callCount === 1)
-assert(funSpy.args.length === 1)
-assert(funSpy.args[0].length === 3)
-assert(funSpy.args[0][0] === 1)
-assert(funSpy.args[0][1] === 2)
-assert(funSpy.args[0][2] === 3)
+assert(funSpy.callCount === 1);
+assert(funSpy.args.length === 1);
+assert(funSpy.args[0].length === 3);
+assert(funSpy.args[0][0] === 1);
+assert(funSpy.args[0][1] === 2);
+assert(funSpy.args[0][2] === 3);
 ```
-
 
 ## API
 
@@ -48,7 +47,6 @@ assert(funSpy.args[0][2] === 3)
 
 Type: `function`
 
-
 ## License
 
-MIT © [Oskar Karlsson](http://oskarkarlsson.nu)
+MIT © [Oskar Karlsson](https://tjoskar.dev)
