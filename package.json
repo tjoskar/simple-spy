@@ -20,7 +20,7 @@
     "lint": "xo",
     "compile": "tsc",
     "test": "node --test lib/index.test.js",
-    "preversion": "npm run compile && npm run list && npm test",
+    "preversion": "npm run compile && npm run lint && npm test",
     "postversion": "git push; git push --tags"
   },
   "keywords": [
