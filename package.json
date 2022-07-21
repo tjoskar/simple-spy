@@ -30,7 +30,7 @@
   "types": "./lib/index.d.ts",
   "devDependencies": {
     "typescript": "4.7.4",
-    "xo": "0.50.0"
+    "xo": "0.51.0"
   },
   "volta": {
     "node": "18.5.0"
