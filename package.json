@@ -29,7 +29,7 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "devDependencies": {
-    "typescript": "4.8.4",
+    "typescript": "4.9.3",
     "xo": "0.52.4"
   },
   "volta": {
